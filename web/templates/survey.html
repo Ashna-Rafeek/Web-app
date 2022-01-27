@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Survey</title>
+        <meta charset="UTF-8">
+        {% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%  static  'css/style1.css'  %}" type="text/css">
+<script>
+  function anyFunction() {
+  alert("Welcome!!! Please register online Internship Form :)"); }</script>
+<script>	
+  function Validate() { 
+        var name = document.forms["RegForm"]["fname"]; 
+        var email = document.forms["RegForm"]["Email"]; 
+        var date = document.forms["RegForm"]["date"]; 
+	var sem = document.forms["RegForm"]["sem"]; 
+	var preference = document.forms["RegForm"]["preference"]; 
+        var feedback = document.forms["RegForm"]["feedback"]; 
+	var filename = document.forms["RegForm"]["filename"]; 
+  
+        if (name.value == "") { 
+            window.alert("Please enter your firstname."); 
+            name.focus(); 
+            return false; 	} 
+	} 
+        if (email.value == "") { 
+            window.alert("Please enter a valid e-mail address."); 
+            email.focus(); 
+            return false; 	} 
+        if (date.value == "") { 
+            window.alert("Please enter your Date Of Birth."); 
+            date.focus(); 
+            return false; 	} 
+        if (sem.value == "") { 
+            window.alert("Please enter your semester."); 
+            age.focus(); 
+            return false; 	} 
+        if (preference.value == "") { 
+            window.alert("Please select the field you are interested in"); 
+            preference.focus(); 
+            return false; 	}   
+        if (filename.value==""){ 
+            window.alert("Please attach your cv or resume."); 
+            type.focus(); 
+            return false; 	} 
+</script>
+<style type="text/css">
+    body{
+        background-color: antiquewhite;
+        background-repeat: no-repeat;
+          background-size: 1600px 800px;
+                    text-align: center; }
+</style>
+</head>
+
+<body onload="anyFunction()">
+
+<h1> Online Internship Registration Form </h1>
+
+<div> About IO21 Internship </div>
+We are currently giving internship opportunities to University students in the field of AI and ML and in areas of Software engineering and Marketing. <br>
+The internships are for a duration of 3 months and its remote internship taking the current pandemic situations into account.<br>
+This internship will start from <b>January till March(3 months)</b>. Also virtual interviews will be held as part of the selection process.<br>
+
+
+<img src="https://i0.wp.com/io21.me/wp-content/uploads/2020/06/Logo_M-e1593430911231.png?fit=370%2C176&ssl=1" name="image" class="img" ></img>
+<h3> Fill the Form to Apply </h3>
+
+<form name="RegForm" action="/submit.php" onsubmit="return Validate()" method="post">
+Full Name <input type="text" name="fname" required field><br><br>
+Email Address: <input type="text" name="Email" required field><br><br>
+
+Year of Graduation: <input type="date" name="date" required field><br><br>
+
+Current semester: <input type="number" name="sem" min="1" max="8" required field><br><br>
+
+Choose your Preference:<br>
+<input type="radio" name=“preference" value="P1" /> Software Engineering Internship <br>
+<input type="radio" name=“preference" value="P2" /> Marketing Internship <br><br>
+
+Any Questions: <br>
+<TEXTAREA rows=“10” cols=“10">  </TEXTAREA><br><br>
+
+Upload CV: <input type="file" id="myFile" name="filename" required field>
+
+<input type="submit" value="Submit" name="Sent" style="background-color: lightsalmon;"/> 
+<a href="/"><button class="button button1" onclick="alert('Thanks for your response')"> Back to home </button></a>
+</button>
+</form>
+</body>
